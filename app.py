@@ -22,7 +22,7 @@ def dashboard():
     import json
 
     # grabbing JSON from a static test URL because I don't have access to fulfil.io
-    data = requests.get("https://glacial-cove-11160.herokuapp.com/testdata")
+    data = requests.get("https://dl.dropboxusercontent.com/u/42080340/response.json")
     recs = json.loads(data.content.decode())
 
     # here we tally the data we'll be plotting
@@ -32,10 +32,7 @@ def dashboard():
     return render_template("dashboard.html")
 
     
-@app.route("/testdata")
-def testdata():
-    # returns the contents of 'response.json' for testing the app 
-    return app.send_static_file("response.json")
+
     
 import os
 if __name__ == "__main__":
