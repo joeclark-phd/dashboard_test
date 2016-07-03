@@ -22,12 +22,12 @@ def dashboard():
     import json
 
     # grabbing JSON from a static test URL because I don't have access to fulfil.io
-    #data = requests.get("https://dl.dropboxusercontent.com/u/42080340/response.json")
-    #recs = json.loads(data.content.decode())
+    data = requests.get("https://dl.dropboxusercontent.com/u/42080340/response.json")
+    recs = json.loads(data.content.decode())
 
     # here we tally the data we'll be plotting
-    #from collections import Counter
-    #states = Counter( [r["shipment_address.subdivision.code"] for r in recs] )
+    from collections import Counter
+    states = Counter( [r["shipment_address.subdivision.code"] for r in recs] )
     
     return render_template("dashboard.html")
 
