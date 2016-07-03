@@ -34,7 +34,7 @@ def dashboard():
 
 
 @app.route("/dash/<apikey>")
-def dash(apikey);
+def dash(apikey):
     # as above, but with the real URL given by sharoon, and API key provided
     url = 'https://fulfil_demo.fulfil.io/api/v1/model/sale.sale?field=reference&field=shipment_address.subdivision.code&field=shipment_address.country.code&filter=[["state","=","processing"]]'
     data = requests.get(url, headers={"x-api-key":apikey})
