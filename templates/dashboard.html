@@ -11,7 +11,11 @@
 
       var data = google.visualization.arrayToDataTable([
         ['State', 'Orders'],
+        
+        {% autoescape false %}
         {{ jslist }}
+        {% endautoescape %}
+        
       ]);
 
       var options = {
