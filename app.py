@@ -1,5 +1,16 @@
 """
 Solution to sharoonthomas's fulfil.io challenge.
+
+Note: I don't have a working API key for the fulfil.io demo server, so I 
+uploaded the sample data (response.json) to Dropbox and used that URL to 
+simulate the JSON web service.  The code to import the data and prepare
+a dashboard is at the '/dashboard' endpoint.
+
+To try the real fulfil.io data with an API key, use '/dash/api-key'.  I have
+no way to test this, but it should work.
+
+Working implementation at: https://glacial-cove-11160.herokuapp.com/dashboard
+
 Created on July 2, 2016
 """
 
