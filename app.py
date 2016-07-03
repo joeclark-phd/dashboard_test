@@ -28,8 +28,10 @@ def dashboard():
     # here we tally the data we'll be plotting
     from collections import Counter
     states = Counter( [r["shipment_address.subdivision.code"] for r in recs] )
+    # format the "data table" as a text string so I don't have to do it in Jinja2
+    jslist = ",".join([ "['{}', {}]".format(i[0],i[1]) for i in states.items()])
     
-    return render_template("dashboard.html")
+    return render_template("dashboard.html",jslist=jslist)
 
     
 

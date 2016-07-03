@@ -11,14 +11,7 @@
 
       var data = google.visualization.arrayToDataTable([
         ['State', 'Orders'],
-        ['US-AL', 1],
-        ['US-CA', 1],
-        ['US-FL', 1],
-        ['US-IL', 1],
-        ['US-NJ', 1],
-        ['US-NY', 1],
-        ['US-TX', 1],
-        ['US-WI', 3]
+        {{ jslist }}
       ]);
 
       var options = {
