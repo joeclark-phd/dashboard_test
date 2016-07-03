@@ -18,16 +18,16 @@ def hello():
 def dashboard():
     # we get the data from a JSON web service and prepare it for display
 
-    #import requests
-    #import json
+    import requests
+    import json
 
     # grabbing JSON from a static test URL because I don't have access to fulfil.io
-    #data = requests.get("http://localhost:5000/testdata")
-    #recs = json.loads(data.content.decode())
+    data = requests.get("https://glacial-cove-11160.herokuapp.com/testdata")
+    recs = json.loads(data.content.decode())
 
     # here we tally the data we'll be plotting
-    #from collections import Counter
-    #states = Counter( [r["shipment_address.subdivision.code"] for r in recs] )
+    from collections import Counter
+    states = Counter( [r["shipment_address.subdivision.code"] for r in recs] )
     
     return render_template("dashboard.html")
 
